@@ -13,8 +13,8 @@ def get_config():
     featureEngineringParser = FeatureEngineeringParser
     modelParser = ModelParser
 
-    for file in os.listdir('yamls'):
-        filepath = os.path.join('yamls', file)
+    for file in os.listdir('src/yamls'):
+        filepath = os.path.join('src/yamls', file)
         config = initialParser(filepath).parse()
 
         features_configs, columns_set_alias = featureEngineringParser(filepath).parse(config['feature_engineering'])

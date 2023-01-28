@@ -1,11 +1,14 @@
 FROM python:3.8
 
-COPY src /app/src
-COPY requirements.txt /app/requirements.txt
-COPY data /app/data
+WORKDIR /py_gces
 
-WORKDIR /app
+COPY src /py_gces/src
+COPY data /py_gces/data
+COPY tests /py_gces/tests
 
-RUN pip install -r requirements.txt
+ENV PYTHONPATH="${PYTHONPATH}:/py_gces"
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["python", "src/main.py"]
