@@ -5,11 +5,7 @@ description = "Lorem ipsum dolor sit amet"
 license = "MIT"
 authors = ["Nicolas Mantzos <georgeos.nicolas83@gmail.com>"]
 readme = "README.md"
-packages = [
-    {include = "src"},
-    {include = "data"},
-    {include = "tests"},
-]
+
 
 
 [tool.poetry.dependencies]
