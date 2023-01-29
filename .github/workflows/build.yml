@@ -21,11 +21,6 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Run App (Docker)
-        run: |
-          docker build -t python-app .
-          docker run python-app
-
       - name: Installation (Poetry/Dependencies)
         run: |
           curl -sSL https://install.python-poetry.org | python3.8 -
