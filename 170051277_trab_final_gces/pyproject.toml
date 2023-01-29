@@ -1,16 +1,10 @@
 [tool.poetry]
-name = "170051277_trab_final_gces"
-version = "0.4.0"
-description = "Pacote utilizado para o deploy do trabalho final da disciplina Gerência de Configuração e Evolução de Software (GCES)."
+name = "170051277-trab-individual-gces"
+version = "0.1.0"
+description = "Lorem ipsum dolor sit amet"
 license = "MIT"
 authors = ["Nicolas Mantzos <georgeos.nicolas83@gmail.com>"]
 readme = "README.md"
-repository = "https://github.com/ngm1450/trabalho_individual_gces_170051277"
-keywords = ["unb", "fga", "gces"]
-
-packages = [
-    { include = "170051277_trab_final_gces" },
-]
 
 [tool.poetry.dependencies]
 python="^3.8"

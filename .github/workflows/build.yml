@@ -9,7 +9,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  tests-build-publish:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,11 +21,24 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Install dependencies
+      - name: Installation (Poetry/Dependencies)
         run: |
-          pip install poetry
-          poetry install --no-dev
+          curl -sSL https://install.python-poetry.org | python3.8 -
+          poetry install
 
-      - name: Test
+      - name: Tests (Pytest)
         run: |
-          poetry run pytest
+          poetry run pytest tests/
+
+      - name: Build and publish to PyPI
+        run: |
+          poetry config pypi-token.pypi ${{ secrets.PYPI_API_KEY }}
+          poetry build 
+          poetry publish    
+
+     
+
+
+
+    
+          
