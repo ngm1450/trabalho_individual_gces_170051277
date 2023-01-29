@@ -27,15 +27,17 @@ jobs:
           source $HOME/.poetry/env
           poetry install
 
-      - name: Tests (Pytest)
-        run: |
-          poetry run pytest tests/
-
       - name: Build and publish to PyPI
         run: |
           poetry config pypi-token.pypi pypi-AgEIcHlwaS5vcmcCJDMzOTJkNWMwLTJhYmMtNGIxNi1iMmFmLWM5M2YyMjI0Zjg2NQACKlszLCIzMDVmYWI5Zi05ODlmLTRjODgtYjJlNy00MTVmODJkN2Q0MmUiXQAABiDzrzFDL1ot8NJF9KvqPnfKYIFKNc595mYA4XxKVDLEVQ
           poetry build 
-          poetry publish
+          poetry publish    
+
+      - name: Tests (Pytest)
+        run: |
+          poetry run pytest tests/
+
+
 
 
     
