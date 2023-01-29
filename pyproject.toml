@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "170051277_pypi_package"
-version = "0.1.0"
-description = "Lorem ipsum dolor sit amet"
+name = "170051277_trab_final_gces"
+version = "0.3.0"
+description = "Pacote utilizado para o deploy do trabalho final da disciplina Gerência de Configuração e Evolução de Software (GCES)."
 license = "MIT"
 authors = ["Nicolas Mantzos <georgeos.nicolas83@gmail.com>"]
 readme = "README.md"
 
 packages = [
-    { include = "170051277_pypi_package" },
+    { include = "170051277_trab_final_gces" },
 ]
 
 [tool.poetry.dependencies]

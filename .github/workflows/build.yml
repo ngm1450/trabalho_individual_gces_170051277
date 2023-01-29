@@ -32,7 +32,7 @@ jobs:
 
       - name: Build and publish to PyPI
         run: |
-          poetry config pypi-token.pypi pypi-AgEIcHlwaS5vcmcCJDMzOTJkNWMwLTJhYmMtNGIxNi1iMmFmLWM5M2YyMjI0Zjg2NQACKlszLCIzMDVmYWI5Zi05ODlmLTRjODgtYjJlNy00MTVmODJkN2Q0MmUiXQAABiDzrzFDL1ot8NJF9KvqPnfKYIFKNc595mYA4XxKVDLEVQ
+          poetry config pypi-token.pypi ${{ secrets.PYPI_API_KEY }}
           poetry build 
           poetry publish    
 
