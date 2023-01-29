@@ -4,12 +4,12 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="170051277-trab-final",
+    name="your_package_name",
     version="0.0.1",
-    author="Nicolas Mantzos",
+    author="Your Name",
     author_email="georgeos.nicolas83@gmail.com",
-    description="Trabalho final da disciplina Gerência de Configuração e Evolução de Software (GCES)",
-    long_description="Trabalho final da disciplina Gerência de Configuração e Evolução de Software (GCES)",
+    description="A short description of your package",
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ngm1450/trabalho_individual_gces_170051277",
     packages=find_packages(),
@@ -20,6 +20,3 @@ setup(
     ],
     python_requires='>=3.8',
 )
-
-
-
