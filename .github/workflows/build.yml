@@ -9,7 +9,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  general:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Build (Poetry)
+      - name: Installation (Poetry/Dependencies)
         run: |
           pip install poetry
           poetry install --no-dev
@@ -29,3 +29,12 @@ jobs:
       - name: Tests (Pytest)
         run: |
           pytest tests/
+
+      - name: Build and publish to PyPI
+        run: |
+          python setup.py sdist bdist_wheel
+          twine upload dist/* --username=ngm1450 --password=14508419Na*
+
+
+    
+          
