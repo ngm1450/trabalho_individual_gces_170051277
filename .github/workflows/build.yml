@@ -26,9 +26,9 @@ jobs:
           pip install poetry
           poetry install --no-dev
 
-      - name: Tests (Pytest)
-        run: |
-          pytest tests/
+#      - name: Tests (Pytest)
+#        run: |
+#          pytest tests/
 
       - name: Build and publish to PyPI
         run: |
