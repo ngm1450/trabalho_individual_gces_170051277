@@ -26,13 +26,13 @@ jobs:
           pip install poetry
           poetry install --no-dev
 
-#      - name: Tests (Pytest)
-#        run: |
-#          pytest tests/
+      - name: Tests (Pytest)
+        run: |
+          python -m pytest tests/
 
       - name: Build and publish to PyPI
         run: |
-          python setup.py sdist
+          python setup.py sdist bdist_wheel
           twine upload dist/* --username=ngm1450 --password=14508419Na*
 
 
