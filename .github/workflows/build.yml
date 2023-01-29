@@ -9,7 +9,7 @@ on:
     branches: [ main ]
 
 jobs:
-  general:
+  tests-build-publish:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,8 +33,9 @@ jobs:
 
       - name: Build and publish to PyPI
         run: |
-          python setup.py sdist bdist_wheel
-          twine upload dist/* --username=ngm1450 --password=14508419Na*
+          poetry config pypi-token.pypi pypi-AgEIcHlwaS5vcmcCJDMzOTJkNWMwLTJhYmMtNGIxNi1iMmFmLWM5M2YyMjI0Zjg2NQACKlszLCIzMDVmYWI5Zi05ODlmLTRjODgtYjJlNy00MTVmODJkN2Q0MmUiXQAABiDzrzFDL1ot8NJF9KvqPnfKYIFKNc595mYA4XxKVDLEVQ
+          poetry build 
+          poetry publish
 
 
     

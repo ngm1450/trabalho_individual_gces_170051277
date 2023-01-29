@@ -1,14 +1,10 @@
 [tool.poetry]
-name = "170051277_pypi_package"
+name = "170051277-trab-individual-gces"
 version = "0.1.0"
 description = "Lorem ipsum dolor sit amet"
 license = "MIT"
 authors = ["Nicolas Mantzos <georgeos.nicolas83@gmail.com>"]
 readme = "README.md"
-
-packages = [
-    { include = "170051277_pypi_package" },
-]
 
 [tool.poetry.dependencies]
 python="^3.8"
