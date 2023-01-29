@@ -6,8 +6,6 @@ license = "MIT"
 authors = ["Nicolas Mantzos <georgeos.nicolas83@gmail.com>"]
 readme = "README.md"
 
-
-
 [tool.poetry.dependencies]
 python="^3.8"
 altair = "^4.2.0"

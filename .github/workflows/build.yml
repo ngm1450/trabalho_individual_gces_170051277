@@ -21,11 +21,11 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Install dependencies
+      - name: Build (Poetry)
         run: |
           pip install poetry
           poetry install --no-dev
 
-      - name: Test
+      - name: Tests (Pytest and Poetry)
         run: |
           poetry run pytest
